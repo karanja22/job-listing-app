@@ -8,8 +8,12 @@ import JobList from "./components/job/JobList";
 import JobModal from "./components/job/JobModal";
 import LoadingSkeleton from "./components/common/LoadingSkeleton";
 import ErrorState from "./components/common/ErrorState";
+import Footer from "./components/layout/Footer";
+
+// Top-level imports and service helpers
 
 export default function App() {
+  // Component state: jobs, categories, loading/error and filters
   const [jobs, setJobs] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -24,14 +28,15 @@ export default function App() {
     budgetMin: "",
     budgetMax: "",
   });
+
   const [sortOption, setSortOption] = useState("newest");
 
+  // loadData: fetch and set jobs/categories with error handling
   const loadData = async () => {
     setLoading(true);
     setError(null);
 
     try {
-      // simulate network delay (1.5s minimum)
       const delay = new Promise((res) => setTimeout(res, 1500));
 
       const [jobData, categoryData] = await Promise.all([
@@ -48,13 +53,17 @@ export default function App() {
       setLoading(false);
     }
   };
+
+  // Trigger data load on mount
   useEffect(() => {
     const timeout = setTimeout(() => {
       loadData();
     }, 0);
+
     return () => clearTimeout(timeout);
   }, []);
 
+  // Compute filtered and sorted jobs based on current filters and sort option
   const filteredAndSortedJobs = useMemo(() => {
     let result = [...jobs];
 
@@ -99,8 +108,6 @@ export default function App() {
       case "most-proposals":
         result.sort((a, b) => b.proposalCount - a.proposalCount);
         break;
-      default:
-        break;
     }
 
     return result;
@@ -112,11 +119,11 @@ export default function App() {
   );
 
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-100 font-sans">
+    <div className="min-h-screen bg-stone-950 text-stone-100 font-sans flex flex-col">
       <Header />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Filter bar */}
+      {/* MAIN CONTENT */}
+      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <SearchFilters
           filters={filters}
           setFilters={setFilters}
@@ -124,7 +131,6 @@ export default function App() {
           locations={locations}
         />
 
-        {/* Sort + count row */}
         {!loading && !error && (
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 my-6">
             <p className="text-sm text-stone-400">
@@ -138,6 +144,7 @@ export default function App() {
               </span>{" "}
               jobs
             </p>
+
             <SortDropdown
               sortOption={sortOption}
               setSortOption={setSortOption}
@@ -145,7 +152,6 @@ export default function App() {
           </div>
         )}
 
-        {/* Main content area */}
         {loading ? (
           <LoadingSkeleton />
         ) : error ? (
@@ -155,7 +161,10 @@ export default function App() {
         )}
       </main>
 
-      {/* Job detail modal — rendered at root level so it overlays everything */}
+      {/* FOOTER  */}
+      <Footer />
+
+      {/* MODAL */}
       {selectedJob && (
         <JobModal job={selectedJob} onClose={() => setSelectedJob(null)} />
       )}

@@ -11,6 +11,7 @@ export const jobs = [
     location: "Nairobi CBD, Kenya",
     skills: ["React", "JavaScript", "CSS", "REST APIs", "Responsive Design"],
     created_at: "2026-05-10",
+    deadline: "2026-05-24",
   },
   {
     job_id: 2,
@@ -24,6 +25,7 @@ export const jobs = [
     location: "Westlands, Nairobi, Kenya",
     skills: ["Node.js", "Express", "MongoDB", "Authentication", "API Design"],
     created_at: "2026-05-11",
+    deadline: "2026-05-28",
   },
   {
     job_id: 3,
@@ -37,6 +39,7 @@ export const jobs = [
     location: "Eastlands, Nairobi, Kenya",
     skills: ["Figma", "UI Design", "UX Research", "Prototyping", "Wireframing"],
     created_at: "2026-05-12",
+    deadline: "2026-05-25",
   },
   {
     job_id: 4,
@@ -50,6 +53,7 @@ export const jobs = [
     location: "Remote (Kenya)",
     skills: ["MongoDB", "Express", "React", "Node.js", "JWT"],
     created_at: "2026-05-13",
+    deadline: "2026-05-30",
   },
   {
     job_id: 5,
@@ -62,6 +66,7 @@ export const jobs = [
     location: "Karen, Nairobi, Kenya",
     skills: ["React Native", "TypeScript", "Redux", "API Integration"],
     created_at: "2026-05-13",
+    deadline: "2026-05-29",
   },
   {
     job_id: 6,
@@ -75,6 +80,7 @@ export const jobs = [
     location: "Nairobi, Kenya",
     skills: ["Docker", "Kubernetes", "AWS", "CI/CD", "Linux"],
     created_at: "2026-05-14",
+    deadline: "2026-06-02",
   },
   {
     job_id: 7,
@@ -87,6 +93,7 @@ export const jobs = [
     location: "Nairobi CBD, Kenya",
     skills: ["SQL", "Excel", "Python", "Power BI", "Data Visualization"],
     created_at: "2026-05-14",
+    deadline: "2026-05-27",
   },
   {
     job_id: 8,
@@ -99,6 +106,7 @@ export const jobs = [
     location: "Upper Hill, Nairobi, Kenya",
     skills: ["Network Security", "Penetration Testing", "Linux", "SIEM"],
     created_at: "2026-05-14",
+    deadline: "2026-06-03",
   },
   {
     job_id: 9,
@@ -111,6 +119,7 @@ export const jobs = [
     location: "Remote",
     skills: ["Technical Writing", "Markdown", "APIs", "Documentation"],
     created_at: "2026-05-15",
+    deadline: "2026-05-26",
   },
   {
     job_id: 10,
@@ -124,5 +133,6 @@ export const jobs = [
     location: "Westlands, Nairobi, Kenya",
     skills: ["Product Strategy", "Agile", "Roadmapping", "User Stories"],
     created_at: "2026-05-15",
+    deadline: "2026-06-05",
   },
 ];

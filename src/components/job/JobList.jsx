@@ -7,7 +7,7 @@ export default function JobList({ jobs, onSelectJob }) {
   }
 
   return (
-    // Responsive grid: 1-col mobile → 2-col tablet → 3-col desktop (Q12 requirement)
+    // Responsive grid: 1-col mobile → 2-col tablet → 3-col desktop
     <section
       aria-label="Job listings"
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"

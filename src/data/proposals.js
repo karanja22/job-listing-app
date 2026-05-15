@@ -6,6 +6,8 @@ export const proposals = [
     proposal_text:
       "I can build a clean React dashboard with reusable components and fast performance.",
     amount: 55000,
+    portfolio_url: "https://brian-portfolio.dev/projects/react-dashboard",
+    timeline: "7 days",
     submitted_at: "2026-05-12",
   },
   {
@@ -15,6 +17,8 @@ export const proposals = [
     proposal_text:
       "Experienced in Node.js APIs, I can integrate secure M-Pesa endpoints smoothly.",
     amount: 75000,
+    portfolio_url: "https://amina.dev/api-work",
+    timeline: "10 days",
     submitted_at: "2026-05-13",
   },
   {
@@ -24,6 +28,8 @@ export const proposals = [
     proposal_text:
       "I design user-friendly UI systems that don’t confuse users in Nairobi or anywhere else.",
     amount: 48000,
+    portfolio_url: "https://brian-portfolio.dev/ui-ux",
+    timeline: "5 days",
     submitted_at: "2026-05-13",
   },
 ];

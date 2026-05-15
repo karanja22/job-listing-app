@@ -1,16 +1,70 @@
-# React + Vite
+# Job Listings Platform (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Setup Instructions
 
-Currently, two official plugins are available:
+```bash
+# Clone the repository
+git clone <your-repo-url>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Navigate into the project folder
+cd job-listings-app
 
-## React Compiler
+# Install dependencies
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Start development server
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Sticky header with navigation links (Home, Jobs, Post a Job, Sign In)
+
+- Real-time search and filtering:
+  - Category filter
+  - Location filter
+  - Budget range filter
+
+- Dynamic job listings from local JSON data
+
+- Responsive grid layout:
+  - 3 columns on desktop
+  - 2 columns on tablet
+  - 1 column on mobile
+
+- Loading skeleton with 1.5s simulated delay
+
+- Empty state when no jobs match filters
+
+- Job detail modal with full job information
+
+- Proposal submission form with validation:
+  - Cover letter (min 100 characters)
+  - Budget input
+  - Timeline input (days)
+  - Optional portfolio URL
+
+- Inline form validation (no browser alerts)
+
+- Keyboard accessible modal (Escape + click outside to close)
+
+- Sorting options:
+  - Newest
+  - Budget (high to low)
+  - Budget (low to high)
+  - Most proposals
+
+- Error handling with retry button
+
+## AI Tools Used
+
+### ChatGPT (OpenAI)
+
+- Used for React component structure and architecture planning
+- Assisted with UI/UX improvements and form validation logic
+- Helped refine state management and filtering logic
+
+### Claude (Anthropic)
+
+- Used for additional UI/UX refinement suggestions
+- Assisted in improving readability and code clarity during development
