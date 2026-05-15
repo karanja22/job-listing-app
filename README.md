@@ -2,6 +2,16 @@
 
 ## Setup Instructions
 
+### Prerequisites (Assumptions)
+
+Before running this project, ensure you have the following installed:
+
+- Node.js (v18 or higher) — required to run the React development environment
+- npm (v9 or higher) — comes with Node.js for managing dependencies
+- Git — required for cloning the repository
+- A modern browser (Chrome, Firefox, Edge)
+- Internet connection (for installing dependencies)
+
 ```bash
 # Clone the repository
 git clone <your-repo-url>
