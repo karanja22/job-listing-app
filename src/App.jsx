@@ -29,11 +29,17 @@ export default function App() {
   const loadData = async () => {
     setLoading(true);
     setError(null);
+
     try {
+      // simulate network delay (1.5s minimum)
+      const delay = new Promise((res) => setTimeout(res, 1500));
+
       const [jobData, categoryData] = await Promise.all([
         fetchJobs(),
         fetchCategories(),
+        delay,
       ]);
+
       setJobs(jobData);
       setCategories(categoryData);
     } catch (err) {
@@ -42,9 +48,11 @@ export default function App() {
       setLoading(false);
     }
   };
-
   useEffect(() => {
-    loadData();
+    const timeout = setTimeout(() => {
+      loadData();
+    }, 0);
+    return () => clearTimeout(timeout);
   }, []);
 
   const filteredAndSortedJobs = useMemo(() => {

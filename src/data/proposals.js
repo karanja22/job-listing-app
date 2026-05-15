@@ -11,7 +11,7 @@ export const proposals = [
   {
     proposal_id: 2,
     job_id: 2,
-    freelancer_id: 2,
+    freelancer_id: 5,
     proposal_text:
       "Experienced in Node.js APIs, I can integrate secure M-Pesa endpoints smoothly.",
     amount: 75000,

@@ -3,7 +3,7 @@ export const reviews = [
     review_id: 1,
     contract_id: 1,
     reviewer_id: 1,
-    reviewee_id: 2,
+    reviewee_id: 5,
     rating: 5,
     comment:
       "Solid work, delivered clean API. Very reliable even with tight deadlines.",

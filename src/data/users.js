@@ -26,4 +26,22 @@ export const users = [
     phone_number: "+254700998877",
     created_at: "2026-05-03",
   },
+  {
+    user_id: 4,
+    full_name: "James Mwangi",
+    email: "james@startup.co.ke",
+    password: "hashed_password_4",
+    role: "client",
+    phone_number: "+254711223344",
+    created_at: "2026-05-04",
+  },
+  {
+    user_id: 5,
+    full_name: "Amina Hassan",
+    email: "amina.dev@gmail.com",
+    password: "hashed_password_5",
+    role: "freelancer",
+    phone_number: "+254722334455",
+    created_at: "2026-05-05",
+  },
 ];

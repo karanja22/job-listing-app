@@ -4,7 +4,7 @@ export const contracts = [
     proposal_id: 2,
     job_id: 2,
     client_id: 1,
-    freelancer_id: 2,
+    freelancer_id: 5,
     start_date: "2026-05-14",
     end_date: "2026-06-14",
     contract_status: "active",
